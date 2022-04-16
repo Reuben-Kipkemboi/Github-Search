@@ -1,0 +1,18 @@
+.navbar{
+    border-radius: 8px 0 0 8px;
+    background-color: rgb(8, 23, 54);
+    position: fixed;
+}
+#home{
+    color: rgb(88, 162, 191);
+    /* color:rgb(113, 237, 154); */
+    font-size:3vh;
+    font-weight: bold;
+}
+#back{
+    color: rgb(64, 135, 55);
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+    
