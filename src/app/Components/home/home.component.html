@@ -1,8 +1,9 @@
 <div class="container-fluid">
 
   <div class="container-fluid bg-light">
-    <div class="text-center">
-      <P class="lead">Know other people via Git search</P>
+    <div class="Header">
+      <span class="lead header">Git search</span>
+      <span class="header2"><i class="fa-brands fa-github"></i></span>
     </div>
     <div class="row">
       <div class="col-md-4 " id="profile" *ngIf = "user">
@@ -21,16 +22,17 @@
       </div>
       <div class="col-md-8">
         <h3 class='text-center'>{{user.name}}'s Repositories</h3>
+        <hr>
         <div class="col-md-12">
           <ul *ngFor="let userRepository of userRepositories" id="ul">
             <li class="list">
-              <div class="card col-md-6" appCardhiglight>
+              <div class="card col-md-8" appCardhiglight>
                 <div class="card-title text-center fw-bold" >{{userRepository.name}}</div>
                 <div class="card-body">{{userRepository.description}}
                     <br>
                     <small>License Info: {{userRepository.license.name}}</small>
                     <br>
-                    <small> {{userRepository.clone_url}}</small>
+                    <small> <i class="fa-solid fa-clone"></i> {{userRepository.clone_url}}</small>
                     <br>
                     <small><i class="fa-solid fa-code-fork"></i><b> {{userRepository.forks}}</b> </small> |
                     <small><i class="fa-solid fa-star"></i><b> {{userRepository.stargazers_count}} </b> </small>

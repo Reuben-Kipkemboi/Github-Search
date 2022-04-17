@@ -25,3 +25,14 @@ img{
 .card-footer a{
     text-decoration:none;
 }
+.Header .header{
+    color: rgb(8, 23, 54);
+    font-size:6vh;
+    font-weight:bold;
+    margin-right: 1%;
+}
+.header2{
+    color: rgb(64, 135, 55);
+    font-size:6vh;
+
+}
