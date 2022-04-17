@@ -38,6 +38,11 @@ export class DataserviceService {
   //     `https://api.github.com/users/${this.username}/repos?order=created&sort=asc?access_token=${this.MYKEY}`)
       
   // }
+  getTheRepositoryInfo(searchingName: string){
+    return this.http
+    .get<Repository>('https:api.github.com/search/repositories?q=${searchingName}')
+
+  }
   updateusername(username:string){
     this.username = username;
   }

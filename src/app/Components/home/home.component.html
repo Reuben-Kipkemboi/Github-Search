@@ -24,8 +24,8 @@
         <div class="col-md-12">
           <ul *ngFor="let userRepository of userRepositories" id="ul">
             <li class="list">
-              <div class="card col-md-6">
-                <div class="card-title text-center fw-bold">{{userRepository.name}}</div>
+              <div class="card col-md-6" appCardhiglight>
+                <div class="card-title text-center fw-bold" >{{userRepository.name}}</div>
                 <div class="card-body">{{userRepository.description}}
                     <br>
                     <small>License Info: {{userRepository.license.name}}</small>

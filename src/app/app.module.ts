@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {HttpClientModule} from '@angular/common/http';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +9,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { MainComponent } from './Components/main/main.component';
 import { HomeComponent } from './Components/home/home.component';
 import { DetailsComponent } from './Components/details/details.component';
+import { CardhiglightDirective } from './cardhiglight.directive';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { DetailsComponent } from './Components/details/details.component';
     NavbarComponent,
     MainComponent,
     HomeComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardhiglightDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
