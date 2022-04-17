@@ -19,7 +19,6 @@
         <a class = "d-flex justify-content-end" href="{{user.html_url}}"><button class="btn btn-primary">view on Github</button></a>
 
       </div>
-
       <div class="col-md-8">
         <h3 class='text-center'>{{user.name}}'s Repositories</h3>
         <div class="col-md-12">
@@ -38,7 +37,7 @@
                     
                 </div>
                 <div class="card-footer">
-                  <i class="fa-solid fa-file-code"></i> {{userRepository.language}} | Topics: {{userRepository.topics}}
+                  <i class="fa-solid fa-file-code"></i> {{userRepository.language}} | <a class = "d-flex justify-content-end"href="{{userRepository.git_url}}"><button class="btn btn-outline-dark">View</button></a>
                 </div>
               </div>
 

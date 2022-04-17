@@ -1,7 +1,9 @@
 img{
     width: 40%;
     border-radius: 50%;
-    border: 2px dashed rgb(8, 23, 54)
+    border: 2px dashed rgb(8, 23, 54);
+   
+    
 }
 #ul{
     list-style-type:none;
@@ -19,4 +21,7 @@ img{
 #profile{
     /* position: fixed; */
     margin:10% 0 0 0;
+}
+.card-footer a{
+    text-decoration:none;
 }
