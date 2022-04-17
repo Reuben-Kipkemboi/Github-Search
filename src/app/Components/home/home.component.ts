@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.dataservice.getGithubUserData().subscribe(
       data => {
         this.user = data
-      // console.log( this.user)
+      console.log( this.user)
   }
     )
 
@@ -24,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.dataservice.getGithubUserRepoData().subscribe(
       data => {
         this.userRepositories = data
-      console.log( this.userRepositories)
+      // console.log( this.userRepositories)
   }
     )
 }

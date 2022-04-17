@@ -9,13 +9,14 @@ import {observable, Observable} from 'rxjs'
   providedIn: 'root'
 })
 export class DataserviceService {
-  
-  username= "Reuben-Kipkemboi";
+  user:any;
+  username= "Reuben-Kipkemboi"; 
+  // username : string; 
   MYKEY: string = environment.apiKey;
   USERAPIURL = `https://api.github.com/users/${this.username}`
-  USERREPOURL = `https://api.github.com/users/${this.username}/repos`
   //  Dependency Injection
   constructor(private http: HttpClient) { 
+    // this.username= "Reuben-Kipkemboi"; 
     console.log('our service is doing quite well...')
   }
 
@@ -25,25 +26,22 @@ export class DataserviceService {
 
   }
   getGithubUserRepoData():Observable<any> {
-    return this.http.get<any>(this.USERREPOURL)
+    return this.http.get<any>(`https://api.github.com/users/${this.username}/repos`)
     
 
   }
   getUserData(username:string){
     return this.http.get<User>(
-      `https://api.github.com/users/${username}`)
+      `https://api.github.com/users/'${this.username}'?acess_token=${this.MYKEY}`);
   }
 
   getUserRepos(githubUsername:string){
     return this.http.get<Repository>(
-      `https://api.github.com/users/${this.username}/repos?order=created&sort=desc?access_token=${this.MYKEY}`)
+      `https://api.github.com/users/${this.username}/repos?order=created&sort=asc?access_token=${this.MYKEY}`)
       
-
-
   }
   updateusername(username:string){
     this.username = username;
-
   }
   
 }
