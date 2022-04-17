@@ -16,6 +16,7 @@ export class DataserviceService {
   USERREPOURL = `https://api.github.com/users/${this.username}/repos`
   //  Dependency Injection
   constructor(private http: HttpClient) { 
+    console.log('our service is doing quite well...')
   }
 
   getGithubUserData():Observable<any> {
@@ -38,6 +39,10 @@ export class DataserviceService {
       `https://api.github.com/users/${this.username}/repos?order=created&sort=desc?access_token=${this.MYKEY}`)
       
 
+
+  }
+  updateusername(username:string){
+    this.username = username;
 
   }
   

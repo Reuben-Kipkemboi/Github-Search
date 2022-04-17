@@ -1,58 +1,53 @@
 <div class="container-fluid">
 
-  <div class="container bg-light">
+  <div class="container-fluid bg-light">
     <div class="text-center">
       <P class="lead">Know other people via Git search</P>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4 " id="profile" *ngIf = "user">
+        <h3 id="name" class="d-flex justify-content-end">{{user.name}}</h3>
+        <img src="{{user.avatar_url}}" alt="github Profile image">
+        <h6 class="d-flex justify-content-end">{{user.bio}}</h6>
+        <h6 class="d-flex justify-content-end">Joined on :<b>{{user.created_at | date}}</b></h6>
+        <h6 class="d-flex justify-content-end"> Number of Public Repositories : <b>{{user.public_repos}}</b></h6>
+        <h6 class="d-flex justify-content-end">Company : <b>{{user.company}}</b></h6>
+        <h6 class="d-flex justify-content-end">Location: <b>{{user.location}}</b></h6>
+        <h6 class="d-flex justify-content-end"><b><a href="{{user.twitter_username}}">Twitter</a></b></h6>
+        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6> 
+        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-person">{{user.following}} Following</i></h6>
+        <a class = "d-flex justify-content-end" href="{{user.html_url}}"><button class="btn btn-primary">view on Github</button></a>
 
-        <h2>{{user.name}}</h2>
-        <img src="{{user.avatar_url}}" alt="">
       </div>
 
-
-
-      <div class="col-md-4">
-        <h5 class="text-center"> About/ Bio </h5>
-        <h6>{{user.bio}}</h6>
-        <em><b>created on :{{user.created_at | date}}</b></em>
-      </div>
-
-      <div class="col-md-4">
-        <h5>More User Info</h5>
-        <h6> Public Repositories {{user.public_repos}}</h6>
-
-        <em><b>{{user.followers}}Followers</b></em>
-        <br>
-        <em><b>{{user.following}}Following</b></em>
-        <br>
-        <em><b>Contact Twitter UserName: {{user.twitter_username}}</b></em>
-        <br>
-        <em><b>Current Location: {{user.location}}</b></em>
-        <br>
-        <em><b>Current Company: {{user.Company}}</b></em>
-      </div>
-
-      <a href="{{user.html_url}}"><button class="btn btn-primary">view Me on Github</button></a>
-    </div>
-  </div>
-
-  <div class="container">
-    <h3 class='text-center'>My Repositories</h3>
-    <div class="col-md-12" >
-      <ul *ngFor="let userRepository of userRepositories">
-          <li class="list col-md-12">
-              <div class="card col-md-3">
-                  <div class ="card-title">{{userRepository.name}}</div>
-                  <div class="card-body">{{userRepository.description}}</div>
-                  <div class="card-footer">
-                      {{userRepository.email}}
-                  </div>
+      <div class="col-md-8">
+        <h3 class='text-center'>{{user.name}}'s Repositories</h3>
+        <div class="col-md-12">
+          <ul *ngFor="let userRepository of userRepositories" id="ul">
+            <li class="list">
+              <div class="card col-md-6">
+                <div class="card-title text-center fw-bold">{{userRepository.name}}</div>
+                <div class="card-body">{{userRepository.description}}
+                    <br>
+                    <small>License Info: {{userRepository.license.name}}</small>
+                    <br>
+                    <small> {{userRepository.clone_url}}</small>
+                    <br>
+                    <small><i class="fa-solid fa-code-fork"></i><b> {{userRepository.forks}}</b> </small> |
+                    <small><i class="fa-solid fa-star"></i><b> {{userRepository.stargazers_count}} </b> </small>
+                    
+                </div>
+                <div class="card-footer">
+                  <i class="fa-solid fa-file-code"></i> {{userRepository.language}} | Topics: {{userRepository.topics}}
+                </div>
               </div>
-            
-          </li>
-      </ul>
+
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
+
+
 </div>

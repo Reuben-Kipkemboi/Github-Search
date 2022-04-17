@@ -1,9 +1,22 @@
 img{
-    width: 50%;
+    width: 40%;
     border-radius: 50%;
     border: 2px dashed rgb(8, 23, 54)
 }
+#ul{
+    list-style-type:none;
+}
 .lists{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    
+
+}
+#name{
+    color: rgb(8, 23, 54);
+    font-weight: bold;
+}
+#profile{
+    /* position: fixed; */
+    margin:10% 0 0 0;
 }

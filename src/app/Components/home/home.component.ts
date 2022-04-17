@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataserviceService } from 'src/app/Services/dataservice.service';
+import { User } from 'src/app/Classes/user';
 
 @Component({
   selector: 'app-home',
@@ -15,15 +16,15 @@ export class HomeComponent implements OnInit {
     this.dataservice.getGithubUserData().subscribe(
       data => {
         this.user = data
-      console.log( this.user)
+      // console.log( this.user)
   }
     )
 
     // My repositories
-    this.dataservice.getGithubUserData().subscribe(
+    this.dataservice.getGithubUserRepoData().subscribe(
       data => {
-        this.user = data
-      console.log( this.user)
+        this.userRepositories = data
+      console.log( this.userRepositories)
   }
     )
 }

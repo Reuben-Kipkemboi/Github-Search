@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { DataserviceService } from 'src/app/Services/dataservice.service';
+import { User } from 'src/app/Classes/user';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-details',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
-
-  constructor() { }
-
+  
+  constructor( private dataservice:DataserviceService) { }
   ngOnInit(): void {
+   
   }
-
+  
 }
+
+  
+
