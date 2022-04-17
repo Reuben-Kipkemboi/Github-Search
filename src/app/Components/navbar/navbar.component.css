@@ -2,6 +2,7 @@
     border-radius: 8px 0 0 8px;
     background-color: rgb(8, 23, 54);
     position: fixed;
+    z-index: 2;
 }
 #home{
     color: rgb(88, 162, 191);

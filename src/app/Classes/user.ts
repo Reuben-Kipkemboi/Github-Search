@@ -1,24 +1,43 @@
 export class User {
-  pictureUrl: string;
-  name: string;
-  numberOfFollowers: number;
-  numberOfFollowing: number;
-  about: string;
-  numberOfRepos: number;
+  login: string;
+  avatar_url: string;
+  bio: string;
+  company: string;
+  created_at: any;
+  followers: number;
+  following: number;
+  html_url: string;
+  location: string;
+  twitter_username: string;
+  updated_at: any;
+  public_repos: number;
 
   constructor(
-    pictureUrl: string,
-    name: string,
-    numberOfFollowers: number,
-    numberOfFollowing: number,
-    about: string,
-    numberOfRepos: number
+    login: string,
+    avatar_url: string,
+    bio: string,
+    company: string,
+    created_at: any,
+    followers: number,
+    following: number,
+    html_url: string,
+    location: string,
+    twitter_username: string,
+    updated_at: any,
+    public_repos: number
   ) {
-    this.pictureUrl = pictureUrl;
-    this.name = name;
-    this.numberOfFollowers = numberOfFollowers;
-    this.numberOfFollowing = numberOfFollowing;
-    this.about = about;
-    this.numberOfRepos = numberOfRepos;
+    this.login = login;
+    this.avatar_url = avatar_url;
+    this.bio = bio;
+    this.company = company;
+    this.created_at =created_at;
+    this.followers = followers;
+    this.following = following;
+    this.html_url = html_url;
+    this.location = location;
+    this.twitter_username = twitter_username;
+    this.updated_at = updated_at;
+    this.public_repos = public_repos;
+    
   }
 }

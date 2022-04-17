@@ -1,5 +1,58 @@
 <div class="container-fluid">
-    <div class="col-md-6">
-        <P class="lead">Know other people via Git search</P>
+
+  <div class="container bg-light">
+    <div class="text-center">
+      <P class="lead">Know other people via Git search</P>
     </div>
+    <div class="row">
+      <div class="col-md-3">
+
+        <h2>{{user.name}}</h2>
+        <img src="{{user.avatar_url}}" alt="">
+      </div>
+
+
+
+      <div class="col-md-4">
+        <h5 class="text-center"> About/ Bio </h5>
+        <h6>{{user.bio}}</h6>
+        <em><b>created on :{{user.created_at | date}}</b></em>
+      </div>
+
+      <div class="col-md-4">
+        <h5>More User Info</h5>
+        <h6> Public Repositories {{user.public_repos}}</h6>
+
+        <em><b>{{user.followers}}Followers</b></em>
+        <br>
+        <em><b>{{user.following}}Following</b></em>
+        <br>
+        <em><b>Contact Twitter UserName: {{user.twitter_username}}</b></em>
+        <br>
+        <em><b>Current Location: {{user.location}}</b></em>
+        <br>
+        <em><b>Current Company: {{user.Company}}</b></em>
+      </div>
+
+      <a href="{{user.html_url}}"><button class="btn btn-primary">view Me on Github</button></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <h3 class='text-center'>My Repositories</h3>
+    <div class="col-md-12" >
+      <ul *ngFor="let userRepository of userRepositories">
+          <li class="list col-md-12">
+              <div class="card col-md-3">
+                  <div class ="card-title">{{userRepository.name}}</div>
+                  <div class="card-body">{{userRepository.description}}</div>
+                  <div class="card-footer">
+                      {{userRepository.email}}
+                  </div>
+              </div>
+            
+          </li>
+      </ul>
+    </div>
+  </div>
 </div>

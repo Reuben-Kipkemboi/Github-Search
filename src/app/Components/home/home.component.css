@@ -1,0 +1,9 @@
+img{
+    width: 50%;
+    border-radius: 50%;
+    border: 2px dashed rgb(8, 23, 54)
+}
+.lists{
+    display: flex;
+    flex-direction: column;
+}

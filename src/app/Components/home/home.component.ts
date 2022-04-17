@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataserviceService } from 'src/app/Services/dataservice.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  user!: any; 
+  userRepositories!: any
+  constructor(private dataservice:DataserviceService) { }
 
   ngOnInit(): void {
+    this.dataservice.getGithubUserData().subscribe(
+      data => {
+        this.user = data
+      console.log( this.user)
   }
+    )
 
+    // My repositories
+    this.dataservice.getGithubUserData().subscribe(
+      data => {
+        this.user = data
+      console.log( this.user)
+  }
+    )
+}
 }
