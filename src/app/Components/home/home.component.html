@@ -6,17 +6,17 @@
       <span class="header2"><i class="fa-brands fa-github"></i></span>
     </div>
     <div class="row">
-      <div class="col-md-4 " id="profile" *ngIf = "user">
-        <h3 id="name" class="d-flex justify-content-end">{{user.name}}</h3>
+      <div class="col-md-4 text-center" id="profile" *ngIf = "user">
+        <h3 id="name" >{{user.name}}</h3>
         <img src="{{user.avatar_url}}" alt="github Profile image">
-        <h6 class="d-flex justify-content-end">{{user.bio}}</h6>
-        <h6 class="d-flex justify-content-end">Joined on :<b>{{user.created_at | date}}</b></h6>
-        <h6 class="d-flex justify-content-end"> Number of Public Repositories : <b>{{user.public_repos}}</b></h6>
-        <h6 class="d-flex justify-content-end">Company : <b>{{user.company}}</b></h6>
-        <h6 class="d-flex justify-content-end">Location: <b>{{user.location}}</b></h6>
-        <h6 class="d-flex justify-content-end"><b><a href="{{user.twitter_username}}">Twitter</a></b></h6>
-        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6> 
-        <h6 class="d-flex justify-content-end"><i class="fa-solid fa-person">{{user.following}} Following</i></h6>
+        <h6 >{{user.bio}}</h6>
+        <h6 >Joined on :<b>{{user.created_at | date}}</b></h6>
+        <h6 > Number of Public Repositories : <b>{{user.public_repos}}</b></h6>
+        <h6 >Company : <b>{{user.company}}</b></h6>
+        <h6 >Location: <b>{{user.location}}</b></h6>
+        <h6 id="tweet"><b> <i class="fa-brands fa-twitter" id="twitter"></i> <a href="{{user.twitter_username}}">Twitter</a></b></h6>
+        <h6 ><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6> 
+        <h6 ><i class="fa-solid fa-person">{{user.following}} Following</i></h6>
         <a class = "d-flex justify-content-end" href="{{user.html_url}}"><button class="btn btn-primary">view on Github</button></a>
 
       </div>
@@ -38,8 +38,8 @@
                     <small><i class="fa-solid fa-star"></i><b> {{userRepository.stargazers_count}} </b> </small>
                     
                 </div>
-                <div class="card-footer">
-                  <i class="fa-solid fa-file-code"></i> {{userRepository.language}} | <a class = "d-flex justify-content-end"href="{{userRepository.git_url}}"><button class="btn btn-outline-dark">View</button></a>
+                <div class="card-footer d-flex justify-content-between">
+                  <span><i class="fa-solid fa-file-code "></i> {{userRepository.language}}</span> <span><a  class = "" href="{{userRepository.git_url}}"><button class="btn btn-outline-dark">View</button></a></span>
                 </div>
               </div>
 
