@@ -16,7 +16,6 @@ export class DataserviceService {
   USERAPIURL = `https://api.github.com/users/${this.username}`
   //  Dependency Injection
   constructor(private http: HttpClient) { 
-    // this.username= "Reuben-Kipkemboi"; 
     console.log('our service is doing quite well...')
   }
 
@@ -28,23 +27,12 @@ export class DataserviceService {
   getGithubUserRepoData():Observable<any> {
     return this.http.get<Repository>('https://api.github.com/users/'+this.username+'/repos?acess_token='+this.MYKEY);
   }
-  // getUserData(username:string){
-  //   return this.http.get<User>(
-  //     `https://api.github.com/users/'${this.username}'?acess_token=${this.MYKEY}`);
-  // }
 
-  // getUserRepos(username:string){
-  //   return this.http.get<Repository>(
-  //     `https://api.github.com/users/${this.username}/repos?order=created&sort=asc?access_token=${this.MYKEY}`)
-      
-  // }
-  getTheRepositoryInfo(searchingName: string){
-    return this.http
-    .get<Repository>('https:api.github.com/search/repositories?q=${searchingName}')
+  getUserData(username:string){
+    return this.http.get<any>(
+      `https://api.github.com/users/${username}`
+    )
+  }
 
-  }
-  updateusername(username:string){
-    this.username = username;
-  }
   
 }

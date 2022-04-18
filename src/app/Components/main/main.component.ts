@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { DataserviceService } from 'src/app/Services/dataservice.service';
 import { User } from 'src/app/Classes/user';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -16,29 +17,38 @@ export class MainComponent implements OnInit {
   searchingName: string = "";
   personalData: any;
   searchingname: any;
-  user: any;
+  user: User = new User("", "", "", "",0,0, 0,"","", "", 0,0);
 
   // Dependency Injection for our router
   constructor(private userdetailsroute: Router, private dataservice: DataserviceService) { }
 
-  ngOnInit(): void {}
-    getGithubUserData(){
-      this.dataservice.getGithubUserData().subscribe(
-        data => {
-          this.user = data
-          this.userdetailsroute.navigate(['/detailsComponent']);
-          console.log( this.user)
-        }
-      )
-      // My repositories
-      // this.dataservice.getGithubUserRepoData().subscribe(
-      //   data => {
-      //     this.userRepositories = data
-      //     // console.log(this.userRepositories)
-      //   }
-      // )
+getUser(githubsearchform:NgForm){
+    let searchingName = githubsearchform.value.searchingName;
+    let submitted = false;
+    this.dataservice.getUserData(searchingName).subscribe(data =>
+      {
+    this.user.login = data.login;  
+    this.user.avatar_url = data.avatar_url;
+    this.user.bio  = data.bio;
+    this.user.company = data.company;
+    this.user.created_at= data.created_at;
+    this.user.followers = data.followers
+    this.user.following = data.following;
+    this.user.html_url = data.html_url;
+    this.user.location = data.location
+    this.user.twitter_username = data.twitter_username;
+    this.user.updated_at = data.updated_at;
+    this.user.public_repos = data.public_repos;
+
+    console.log(this.user);
+      })
+    
     }
+
+  ngOnInit(): void {}
+    
   }
+  
 
 
 

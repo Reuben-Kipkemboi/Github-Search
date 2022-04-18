@@ -21,7 +21,7 @@ export class User {
     followers: number,
     following: number,
     html_url: string,
-    location: string,
+    location: any,
     twitter_username: string,
     updated_at: any,
     public_repos: number

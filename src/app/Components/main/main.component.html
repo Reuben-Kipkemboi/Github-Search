@@ -3,14 +3,44 @@
   <div class="col-md-6">
     <h4 class="text-center fw-bold fs-3" id="heading">Git Search</h4>
     <!-- <form role="form" [formGroup]="githubsearchForm" (ngSubmit)="getUser()"> -->
-    <form action="" #githubsearchform="ngForm" (ngSubmit)="getGithubUserData()">
+    <form action="" #githubsearchform="ngForm" (ngSubmit)="getUser(githubsearchform)">
       <div class="form-group mb-3">
         <label class="sr-only text-center mb-3 fs-4 fw-bold" for="search">Lets do the search for you.....</label>
-        <input type="text" [(ngModel)]="searchingName" name="searchingName"  class="form-control" id="search" placeholder="Git hub userName ">
-        <p class="text-center">Enter a valid username</p>
+        <input type="text" [(ngModel)]="searchingName" name="searchingName" class="form-control" id="search"
+          placeholder="Git hub userName " ngModel required>
       </div>
-      <button type="submit"class="btn btn-outline-danger d-block mx-auto">Search</button>
+      <button type="submit" id ="btn"class="btn btn-outline-danger d-block mx-auto">Search</button>
     </form>
+  </div>
+
+
+  <div class="cointainer">
+    <div class="row" *ngIf="user">
+    <div class="col-md-4 mt-5 text-right">
+      <img id="avatar" src="{{user.avatar_url}}">
+      
+
+    </div>
+    <div class="col-md-6 mt-5">
+      <h3 id = "info"class="text-uppercase"><em>User Info</em></h3>
+      <h6><b>Name :</b> {{user.login}}</h6>
+      <br>
+      <h6> <b>Bio</b> :<em><strong>{{user.bio}}</strong></em></h6>
+      <br>
+      <h6> <i class="fa-solid fa-people-group"> </i> {{user.followers}} Followers</h6>
+      <br>
+      <h6> <i class="fa-solid fa-person"></i> {{user.following}} Following</h6>
+      <br>
+      <h6> <i class="fa-solid fa-folder"></i> {{user.public_repos}} Public Repositories</h6>
+      <br>
+      <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at |date}}</h6>
+      <br>
+      <a href="{{user.html_url}}"><button class="btn btn-outline-info"> <i class="fa-brands fa-github"></i> View on Github</button></a>
+
+
+    </div>
+  </div>
+
   </div>
 
 </div>
