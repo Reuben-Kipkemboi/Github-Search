@@ -72,6 +72,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 [Go Back to the top](#githubsearch)
 
+## Known budgets
+
+- Users not able to search for repositories using repository name.
+
 ## License
 
 [MIT License](LICENSE)
