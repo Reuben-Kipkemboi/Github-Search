@@ -7,6 +7,7 @@
 - [Description](#description)
 - [Installation Requirement](#installation)
 - [Technology Used](#technologies-used)
+- [Known bugs](#known-bugs)
 - [License](#license)
 - [Authors Info](#authors-info)
 
@@ -76,6 +77,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 - Users not able to search for repositories using repository name.
 
+[Go Back to the top](#githubsearch)
+
 ## License
 
 [MIT License](LICENSE)
@@ -86,8 +89,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 - Email - [Reuben Kipkemboi](https://gmail.com)
 
+[Go Back to the top](#githubsearch)
+
 # live site
 
--
+- #### https://reuben-kipkemboi.github.io/Github-Search/
+
+[Go Back to the top](#githubsearch)
 
 
