@@ -10,6 +10,7 @@ import { MainComponent } from './Components/main/main.component';
 import { HomeComponent } from './Components/home/home.component';
 import { DetailsComponent } from './Components/details/details.component';
 import { CardhiglightDirective } from './cardhiglight.directive';
+import { UploadDatePipe } from './Pipes/upload-date.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CardhiglightDirective } from './cardhiglight.directive';
     MainComponent,
     HomeComponent,
     DetailsComponent,
-    CardhiglightDirective
+    CardhiglightDirective,
+    UploadDatePipe
   ],
   imports: [
     BrowserModule,

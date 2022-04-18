@@ -5,8 +5,9 @@
       <span class="lead header">Git search</span>
       <span class="header2"><i class="fa-brands fa-github"></i></span>
     </div>
+    <!-- Personal Information -->
     <div class="row">
-      <div class="col-md-4 text-center" id="profile">
+      <div class="col-md-4 text-center fixed-top" id="profile">
         <h3 id="name">{{user.name}}</h3>
         <img src="{{user.avatar_url}}" alt="github Profile image" appCardhiglight>
         <h6>{{user.bio}}</h6>
@@ -17,12 +18,12 @@
         <h6 id="tweet"><b> <i class="fa-brands fa-twitter" id="twitter"></i> <a
               href="{{user.twitter_username}}">Twitter</a></b></h6>
         <h6><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6>
-        <h6><i class="fa-solid fa-person">{{user.following}} Following</i></h6>
-        <a class="d-flex justify-content-end" href="{{user.html_url}}"><button class="btn btn-primary">view on
-            Github</button></a>
-
+        <h6><i class="fa-solid fa-person" id="followers">{{user.following}} Following</i></h6>
+        <a class="d-flex justify-content-end git" href="{{user.html_url}}"><button class="btn btn-outline-info">view on
+            Github</button></a>          
       </div>
-      <div class="col-md-8">
+      <!-- repositories -->
+      <div class="col-md-8 offset-md-4">
         <h3 class='text-center'>{{user.name}}'s Repositories</h3>
         <hr>
         <div class="col-md-12">

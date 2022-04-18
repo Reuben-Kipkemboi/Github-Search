@@ -22,7 +22,7 @@
 
     </div>
     <div class="col-md-6 mt-5">
-      <h3 id = "info"class="text-uppercase"><em>User Info</em></h3>
+      <h3 id = "info"class="text-uppercase"><em appCardhiglight>User Info</em></h3>
       <h6><b>Name :</b> {{user.login}}</h6>
       <br>
       <h6> <b>Bio</b> :<em><strong>{{user.bio}}</strong></em></h6>
@@ -33,7 +33,7 @@
       <br>
       <h6> <i class="fa-solid fa-folder"></i> {{user.public_repos}} Public Repositories</h6>
       <br>
-      <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at |date}}</h6>
+      <h6> <i class="fa-solid fa-calendar-check"></i> Last Update :{{user.updated_at |uploadDate}}</h6>
       <br>
       <a href="{{user.html_url}}"><button class="btn btn-outline-info"> <i class="fa-brands fa-github"></i> View on Github</button></a>
 

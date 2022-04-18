@@ -22,6 +22,7 @@ img{
     /* position: fixed; */
     margin:10% 0 0 0;
     border-left: 1.5px solid rgb(8, 23, 54);
+    
 }
 .card-footer a{
     text-decoration:none;
@@ -37,7 +38,8 @@ img{
     font-size:6vh;
 
 }
-.col-md-8{
+#followers{
+    text-transform: lowercase;
     
 }
 #twitter{
@@ -46,5 +48,8 @@ img{
 }
 #tweet a{
     color: rgb(8, 23, 54);
+    text-decoration: none;
+}
+.git{
     text-decoration: none;
 }
