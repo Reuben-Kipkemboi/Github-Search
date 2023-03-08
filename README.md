@@ -5,7 +5,7 @@
 ## Table of Content
 
 - [Description](#description)
-- [Installation Requirement](#installation)
+- [Installation Requirement](#installation-requirements)
 - [Technology Used](#technologies-used)
 - [Known bugs](#known-bugs)
 - [License](#license)
@@ -37,7 +37,16 @@ User should search github wih the username.
   Easy navigation
 - Navigation bar to help user navigate the application at ease.
 
-## Installation
+## Installation Requirements
+
+### Prerequisites
+
+- Django
+- Pip & Python
+- cloudinary 
+- Postgres Database
+- Gunicorn
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.1.
 
@@ -65,11 +74,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Technologies Used
 
-- HTML(Hyper Text Mark Up Language) -To structure the layout of the portfolio page.
-
-- CSS(Cascading Stylesheets) and Bootstrap - For application  styling.
-
-- Typescript - Make the page dynamic and improve user interactivity for example alerts and form inputs clearing.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 [Go Back to the top](#githubsearch)
 
@@ -81,13 +92,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## License
 
-[MIT License](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Authors Info
 
-- Slack - [Reuben Kipkemboi]()
-
-- Email - [Reuben Kipkemboi](https://gmail.com)
+:email: [Reuben Kipkemboi](https://gmail.com)  
 
 [Go Back to the top](#githubsearch)
 
@@ -95,6 +104,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 - #### https://reuben-kipkemboi.github.io/Github-Search/
 
-[Go Back to the top](#githubsearch)
+<p align = "center">
+    &copy; 2023 @Reuben Kipkemboi.
+</p>
 
 
