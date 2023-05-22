@@ -1,8 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Roboto+Mono&display=swap');
+
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
 
 *{
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'SF Mono', sans-serif;
+                                          
     box-sizing: border-box;
     margin: 0;
     padding: 0;
