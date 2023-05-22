@@ -6,18 +6,17 @@
 }
 #home{
     color: rgb(88, 162, 191);
-    /* color:rgb(113, 237, 154); */
-    font-size:3vh;
+    font-size:2.5vh;
     font-weight: bold;
 }
 #back{
     color: rgb(64, 135, 55);
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: bold;
 }
 #Search{
     color: #ffffff;
-    font-size: 3vh;
+    font-size: 2.5vh;
     font-weight: bold;
 
 }
