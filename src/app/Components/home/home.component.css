@@ -2,11 +2,9 @@
         background-color: #0a192f;
 }
 img{
-    width: 40%;
-    border-radius: 50%;
-    /* border: 2px dashed rgb(8, 23, 54); */
-   
-    
+    width: 20%;
+    /* height: 15vh; */
+    border-radius: 50%;   
 }
 #ul{
     list-style-type:none;
