@@ -1,7 +1,10 @@
+.container-fluid{
+        background-color: #081736;
+}
 img{
     width: 40%;
     border-radius: 50%;
-    border: 2px dashed rgb(8, 23, 54);
+    /* border: 2px dashed rgb(8, 23, 54); */
    
     
 }
