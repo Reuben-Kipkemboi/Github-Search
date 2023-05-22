@@ -25,7 +25,11 @@ img{
 .card-footer a{
     text-decoration:none;
 }
-.Header .header{
+.header{
+    text-align: center;
+    margin-bottom: 4%;
+}
+.header .header{
     color: rgb(8, 23, 54);
     font-size:6vh;
     font-weight:bold;
