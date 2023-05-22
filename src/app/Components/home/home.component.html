@@ -1,73 +1,63 @@
 <div class="container-fluid">
-
   <div class="container-fluid">
     <div class="header">
-      <span class="lead header">Git search</span>
+      <span class="lead-header">Git search</span>
       <span class="header2"><i class="fa-brands fa-github"></i></span>
     </div>
     <!-- Personal Information -->
-    <div class="text-center" id="profile">
-      <h3 id="name">{{user.name}}</h3>
-      <img src="{{user.avatar_url}}" alt="user avatar">
-
-          <h6 appCardhiglight>Joined on :<b>{{user.created_at | date}}</b></h6>
-    <h6> Number of Public Repositories : <b>{{user.public_repos}}</b></h6>
-    <h6>Company : <b>{{user.company}}</b></h6>
-    <h6 appCardhiglight>Location: <b>{{user.location}}</b></h6>
-    <h6 id="tweet"><b> <i class="fa-brands fa-twitter" id="twitter"></i> <a
-          href="{{user.twitter_username}}">Twitter</a></b></h6>
-    <h6><i class="fa-solid fa-people-group"></i> {{user.followers}} Followers</h6>
-    <h6><i class="fa-solid fa-person" id="followers">{{user.following}} Following</i></h6>
-    <br>
-    <a class="d-flex justify-content-center git" href="{{user.html_url}}"><button class="btn btn-outline-info">view on
-        Github</button></a>
-      
-    </div>
-    
     <div class="row">
-
-      <!-- repositories -->
-      <div class="col-md-8 offset-md-4">
-        <h3 class='text-center'>{{user.name}}'s Repositories</h3>
-        <hr>
-        <div class="col-md-12">
-          <ul *ngFor="let userRepository of userRepositories" id="ul">
-            <li class="list">
-              <div class="card col-md-8" appCardhiglight>
-                <div class="card-title text-center fw-bold">
-                  {{userRepository.name}}
+      <div class="center-div">
+      <div class="col d-flex justify-content-center text-center">
+        <div class="profile-card">
+          <div class="card-body" id="card-body">
+            <img class="image" [src]="user.avatar_url">
+            <h2 class="card-title">{{ user.name }}</h2>
+            <h6 class="card-subtitle mb-2 text-muted">@ {{ user.login }}</h6>
+            <p class="date-joined"> Joined: {{ user.created_at | date }} </p>
+            <p class="text-muted repo-update"> Last User Update: {{ user.updated_at | date }} </p>
+            <div class="row" id="stats-row">
+              <div class="col-md-2"></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-2">
+                <div class="stats-card">
+                  <h2>{{ user.public_repos }}</h2>
+                  <p>Repositories</p>
                 </div>
-                <div class="card-body">
-                  <div class="card-title">
-                    {{userRepository.description}}
-                  </div>
-                  <div class="card-text">
-
-                    <small><i class="fa-solid fa-code-fork text-success"></i><b class="me-5 text-success">
-                        {{userRepository.forks}}</b> </small> |
-                    <small><i class="fa-solid fa-star text-success ms-5"></i><b class="me-5 text-success">
-                        {{userRepository.stargazers_count}} </b> </small>
-                    <br>
-                    <small> <i class="fa-solid fa-clone text-success"></i> {{userRepository.clone_url}}</small>
-                  </div>
-                </div>
-
-                <div class="card-footer d-flex justify-content-between">
-                  <span><i class="fa-solid fa-file-code text-success "></i> {{userRepository.language}}</span> <span><a
-                      class="" href="{{userRepository.html_url}}"><button
-                        class="btn btn-outline-dark">View</button></a></span>
-                </div>
-
               </div>
+              <div class="col-md-2">
+                <div class="stats-card" appRepoHighlight>
+                  <h2>{{ user.followers }}</h2>
+                  <p>Follower(s)</p>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="stats-card" appRepoHighlight>
+                  <h2>{{ user.following }}</h2>
+                  <p>Following</p>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
 
 
-            </li>
-
-          </ul>
+          <!-- repositories -->
+          <h2 class="text-center"id="repositories-heading">Repositories</h2>
+          <hr class="hr">
+          <p class="text-center" id="desc">Below is a list of repos found on {{user.name}}'s GitHub page</p>
+          <div class="row">
+            <div class="col-md-4" *ngFor="let repo of userRepositories">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <h6 class="card-title repo-name"></h6>
+                  <p class="card-text">{{ repo.description}}</p>
+                  <p class="card-text text-muted updated">Last Updated: {{repo.updated_at | date}} </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
-
 </div>

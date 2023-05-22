@@ -1,58 +1,114 @@
-.container-fluid{
-        background-color: #0a192f;
+.container-fluid {
+  background-color: #0a192f;
 }
-img{
-    width: 20%;
-    /* height: 15vh; */
-    border-radius: 50%;   
+
+img {
+  width: 13%;
+  border-radius: 50%;
 }
-#ul{
-    list-style-type:none;
+
+.card-title {
+  color: #fff;
 }
-.lists{
-    display: flex;
-    
+
+.date-joined {
+  font-size: 1.8vh;
+  color: #fff;
+}
+
+hr{
+    /* width:10vw; */
+    border: 0;
+    height: 0.5px;
+    width: 15%;
+    color: #fff;
+    margin: auto;
+}
+
+.stats-card,
+#repos {
+  background-color: #112240;
+  padding: 2%;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  margin-bottom: 3%;
+}
+
+#ul {
+  list-style-type: none;
+}
+
+.lists {
+  display: flex;
+
 
 }
-#name{
-    color: rgb(8, 23, 54);
-    font-weight: bold;
+
+#name {
+  color: #fff;
+  font-weight: bold;
 }
-#profile{
-    margin:10% 0 0 0;
-    border-left: 1.5px solid rgb(8, 23, 54);
-    
-}
-.card-footer a{
-    text-decoration:none;
-}
-.header{
-    text-align: center;
-    margin-bottom: 4%;
-}
-.header .header{
-    color: rgb(8, 23, 54);
-    font-size:6vh;
-    font-weight:bold;
-    margin-right: 1%;
-}
-.header2{
-    color: rgb(64, 135, 55);
-    font-size:6vh;
+
+#profile {
+  margin-top: 3%;
+  border-left: 1.5px solid rgb(8, 23, 54);
 
 }
-#followers{
-    text-transform: lowercase;
+
+.card-footer a {
+  text-decoration: none;
+}
+
+.header {
+  font-size: 2vh;
+}
+
+.header .lead-header {
+  color: #fff;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-right: 1%;
+}
+
+.header2 {
+  color: rgb(64, 135, 55);
+  font-size: 2.5vh;
+
+}
+
+#followers {
+  text-transform: lowercase;
+
+}
+
+#twitter {
+  color: rgb(30, 161, 242);
+  margin-right: 1%;
+}
+
+#tweet a {
+  color: rgb(8, 23, 54);
+  text-decoration: none;
+}
+
+.git {
+  text-decoration: none;
+}
+#repositories-heading{
+    color: #fff;
+    margin-top: 2%;
     
 }
-#twitter{
-    color:  rgb(30, 161, 242);
-    margin-right: 1%;
-}
-#tweet a{
-    color: rgb(8, 23, 54);
-    text-decoration: none;
-}
-.git{
-    text-decoration: none;
+
+#desc{
+    color: #fff;
+    font-size: 1.8vh;
+    margin-top: 2%;
 }
