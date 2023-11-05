@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
   <div class="container-fluid">
     <div class="header">
       <span class="lead-header">Git search</span>
@@ -7,51 +7,68 @@
     <!-- Personal Information -->
     <div class="row">
       <div class="center-div">
-      <div class="col d-flex justify-content-center text-center">
-        <div class="profile-card">
-          <div class="card-body" id="card-body">
-            <img class="image" [src]="user.avatar_url">
-            <h2 class="card-title">{{ user.name }}</h2>
-            <h6 class="card-subtitle mb-2 text-muted">@ {{ user.login }}</h6>
-            <p class="date-joined"> Joined: {{ user.created_at | date }} </p>
-            <p class="text-muted repo-update"> Last User Update: {{ user.updated_at | date }} </p>
-            <div class="row" id="stats-row">
-              <div class="col-md-2"></div>
-              <div class="col-md-1"></div>
-              <div class="col-md-2">
-                <div class="stats-card">
-                  <h2>{{ user.public_repos }}</h2>
-                  <p>Repositories</p>
+        <div class="col d-flex justify-content-center text-center">
+          <div class="profile-card">
+            <div class="card-body" id="card-body">
+              <img class="image" [src]="user.avatar_url">
+              <h2 class="card-title">{{ user.name }}</h2>
+              <h6 class="card-subtitle mb-2 text-muted">@ {{ user.login }}</h6>
+              <!-- <p class="date-joined"> Joined: {{ user.created_at | date }} </p> -->
+              <p class="text-muted repo-update"> Last User Update: {{ user.updated_at | date }} </p>
+              <div class="row" id="stats-row">
+                <div class="col-md-2"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2">
+                  <div class="stats-card">
+                    <h2>{{ user.public_repos }}</h2>
+                    <p>Repositories</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <div class="stats-card" appRepoHighlight>
-                  <h2>{{ user.followers }}</h2>
-                  <p>Follower(s)</p>
+                <div class="col-md-2">
+                  <div class="stats-card" appRepoHighlight>
+                    <h2>{{ user.followers }}</h2>
+                    <p>Follower(s)</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-2">
-                <div class="stats-card" appRepoHighlight>
-                  <h2>{{ user.following }}</h2>
-                  <p>Following</p>
+                <div class="col-md-2">
+                  <div class="stats-card" appRepoHighlight>
+                    <h2>{{ user.following }}</h2>
+                    <p>Following</p>
+                  </div>
                 </div>
+                <div class="col-md-2"></div>
               </div>
-              <div class="col-md-2"></div>
             </div>
-          </div>
+            <!-- repositories -->
+            <h2 class="text-center" id="repositories-heading">Repositories</h2>
+            <hr class="hr">
+            <p class="text-center" id="desc">Below is a list of repos found on {{user.name}}'s GitHub page</p>
+            <div class="row">
+              <div class="col-md-4" *ngFor="let repo of userRepositories">
+                <div class="card mb-3" id="repo-cards">
+                  <div class="card-body">
+                    <h6 class="card-title repo-name"> <i class="fa-solid fa-folder"></i> {{ repo.name  | uppercase }}
+                    </h6>
+                    <p class="card-text">{{ repo.description}}</p>
+                    <div class="row">
+                      <div class="col-md-1"></div>
+                      <div class="col-md-3">
+                        <span><i class="fa-solid fa-star"></i></span>
+                        <span>{{repo.watchers_count}}</span>
+                      </div>
+                      <div class="col-md-3">
+                        <span><i class="fa-solid fa-code-fork"></i></span>
+                        <span>{{repo.forks}}</span>
+                      </div>
+                      <div class="col-md-5">
+                        <span><i class="fa-solid fa-language"></i></span>
+                        <span>{{repo.language}}</span>
+                      </div>
+                    </div>
 
-
-          <!-- repositories -->
-          <h2 class="text-center"id="repositories-heading">Repositories</h2>
-          <hr class="hr">
-          <p class="text-center" id="desc">Below is a list of repos found on {{user.name}}'s GitHub page</p>
-          <div class="row">
-            <div class="col-md-4" *ngFor="let repo of userRepositories">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <h6 class="card-title repo-name"></h6>
-                  <p class="card-text">{{ repo.description}}</p>
-                  <p class="card-text text-muted updated">Last Updated: {{repo.updated_at | date}} </p>
+                    <p class="card-text updated">Last Updated: {{repo.updated_at | date}} <a
+                        href="{{repo.html_url}}" target="_blank" rel="noopener noreferrer" id="view">View</a></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -60,4 +77,3 @@
       </div>
     </div>
   </div>
-</div>

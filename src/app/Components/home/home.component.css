@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+
+
 .container-fluid {
   background-color: #0a192f;
 }
@@ -16,17 +19,52 @@ img {
   color: #fff;
 }
 
-hr{
-    /* width:10vw; */
-    border: 0;
-    height: 0.5px;
-    width: 15%;
-    color: #fff;
-    margin: auto;
+.repo-name {
+  color: #fff;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+#repo-cards {
+  background-color: #112240;
+  color: #fff;
+  height: 50vh;
+  border-radius: 10px;
+  font-family: 'Chakra Petch', sans-serif;
+}
+
+.updated {
+  margin-top: 2%;
+  text-align: start;
+  color: #fff;
+}
+
+#view {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.5vh;
+}
+
+#view:hover {
+  background-color: #fff;
+  color: #0a192f;
+  padding: 2%;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+hr {
+  /* width:10vw; */
+  border: 0;
+  height: 0.5px;
+  width: 15%;
+  color: #fff;
+  margin: auto;
 }
 
 .stats-card,
-#repos {
+#repos,
+#repo-cards {
   background-color: #112240;
   padding: 2%;
   color: #fff;
@@ -39,6 +77,10 @@ hr{
     0 41.8px 33.4px rgba(0, 0, 0, 0.086),
     0 100px 80px rgba(0, 0, 0, 0.12);
   margin-bottom: 3%;
+  
+}
+.stats-card>h2{
+  font-family: 'Chakra Petch', sans-serif;
 }
 
 #ul {
@@ -101,14 +143,15 @@ hr{
 .git {
   text-decoration: none;
 }
-#repositories-heading{
-    color: #fff;
-    margin-top: 2%;
-    
+
+#repositories-heading {
+  color: #fff;
+  margin-top: 2%;
+
 }
 
-#desc{
-    color: #fff;
-    font-size: 1.8vh;
-    margin-top: 2%;
+#desc {
+  color: #fff;
+  font-size: 1.8vh;
+  margin-top: 2%;
 }
